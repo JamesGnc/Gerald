@@ -2,6 +2,7 @@
 import { ref, reactive, onMounted } from 'vue'
 import IconGithub from '@/components/icons/github.vue'
 import IconEmail from '@/components/icons/email.vue'
+import IconLink from '@/components/icons/link.vue'
 import defaultSet from '../settings'
 onMounted(() => {})
 </script>
@@ -12,18 +13,19 @@ onMounted(() => {})
     <!-- <p>关于作者是个菜鸡🐔。</p> -->
     <br />
     <p>
-      积累的小目，包含
-      <span class="font-bold underline text-sm">css</span>、
-      <span class="font-bold underline text-sm">html</span>、
-      <span class="font-bold underline text-sm">js</span>、
-      <span class="font-bold underline text-sm">vue</span>、
-      <span class="font-bold underline text-sm">微信小程序</span>、
+      喜欢并且略有涉猎的技术，大致包含
+      <span class="font-bold underline text-sm">HTML / CSS / JS</span>、
+      <!-- <span class="font-bold underline text-sm">html</span>、
+      <span class="font-bold underline text-sm">js</span>、 -->
+      <span class="font-bold underline text-sm">Vue</span>、
+      <span class="font-bold underline text-sm">微信小程序 (Uniapp)</span>、
       <span class="font-bold underline text-sm">SpringBoot</span>、
       <span class="font-bold underline text-sm">.Net Core</span>等。
     </p>
+    <br>
     <!-- <p>大多是以动画效果形式展示，方便有效理解和提起我的兴趣。偶尔我自己也会翻着看🤣</p> -->
     <p>
-      自己也有游走于各大交流平台，如
+      目前也有游走于各大技术交流平台，如
       <a
         class="text-sm text-stone-800 font-bold"
         href="https://juejin.cn/user/Genc"
@@ -71,7 +73,7 @@ onMounted(() => {})
     </p>
 
     <p class="mb-2 flex items-center select-none">
-      <!-- <IconGithub class="mr-2" /> -->
+      <IconLink class="mr-2" />
       <a
         class="text-stone-800 text-sm font-bold hover:opacity-50 hover:no-underline"
         target="_blank"

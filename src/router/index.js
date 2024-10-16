@@ -14,13 +14,19 @@ const router = createRouter({
       path: '/works',
       name: 'Works',
       component: () => import('../views/Works.vue'),
-      meta: { title: '作品', keepAlive: true }
+      meta: { title: '技术', keepAlive: true }
     },
     {
       path: '/about',
       name: 'About',
       component: () => import('../views/About.vue'),
       meta: { title: '关于' }
+    },
+    {
+      path: '/comment',
+      name: 'Comment',
+      component: () => import('../views/Comment.vue'),
+      meta: { title: '留言',}
     },
     ...routes
   ]
