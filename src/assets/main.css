@@ -1,0 +1,28 @@
+@import "./base.css";
+
+body {
+    /* background-color: #f8f8f8; */
+    margin: 0;
+}
+/*滚动条容器*/
+body::-webkit-scrollbar {
+    width: 4px; 
+    height: 4px;
+    background-color: #e3e3e3;
+}
+
+/*滚动条里面小方块*/
+body::-webkit-scrollbar-thumb {
+    background: #333333;
+}
+.app-content-center,
+.overall {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
