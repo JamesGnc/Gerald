@@ -7,11 +7,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      // name: 'Home',
-      // component: () => import('../views/Home.vue')
-      name: 'Works',
-      component: () => import('../views/Works.vue'),
-      meta: { title: '作品', keepAlive: true }
+      name: 'Home',
+      component: () => import('../views/Home.vue')
     },
     {
       path: '/works',
