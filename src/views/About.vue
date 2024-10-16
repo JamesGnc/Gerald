@@ -4,6 +4,12 @@ import IconGithub from '@/components/icons/github.vue'
 import IconEmail from '@/components/icons/email.vue'
 import IconLink from '@/components/icons/link.vue'
 import defaultSet from '../settings'
+import { CursorSpecialEffects  } from '@/assets/js/mouseClick.js';
+
+onMounted(() => {
+  const cursorSpecialEffects = new CursorSpecialEffects();
+  cursorSpecialEffects.init();
+});
 onMounted(() => {})
 </script>
 <template>

@@ -1,9 +1,17 @@
 <script setup>
 import 'element-plus/es/components/message/style/css'
-import { ElMessage } from 'element-plus'
+import { onMounted } from 'vue'; 
+import { CursorSpecialEffects  } from '@/assets/js/mouseClick.js';
+
+onMounted(() => {
+  const cursorSpecialEffects = new CursorSpecialEffects();
+  cursorSpecialEffects.init();
+});
+
 </script>
 <template>
   <div
+    id = "app"
     class="pt-28 px-12 sm:px-60 text-xs tracking-widest sm:max-w-screen-sm sm:m-auto selection:bg-stone-700 selection:text-white"
   >
     <br />
