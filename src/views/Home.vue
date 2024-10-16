@@ -33,8 +33,8 @@ const mouseListener = function (event) {
       <div class="w-80 h-full absolute left-0 top-0 hidden sm:block home-glass" style="backdrop-filter: blur(3px); filter: url(#image5)"></div>
       <div class="text-white text-2xl font-black tracking-[.5rem] z-10 px-24 pointer-events-none">
         <p>A LIKE</p>
-        <p>花里胡哨</p>
-        <p>前端程序员</p>
+        <!-- <p>花里胡哨</p> -->
+        <p>前端</p>
         <p>的</p>
         <p>后端程序员</p>
       </div>

@@ -1,6 +1,6 @@
 export default {
     userName:'Gerald',
-    email:'1796487364@qq.com',
+    email:'l1796487364@yeah.net',
     github:'https://github.com/sunwenxu1997',
     // 掘金
     juejin:'https://juejin.cn/user/Genc',
