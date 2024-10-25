@@ -19,6 +19,109 @@ const mouseListener = function (event) {
     y: y * 0.05
   })
 }
+
+// 控制台打印
+const prettyLog = () => {
+    const isEmpty = (value) => {
+        return value == null || value === undefined || value === '';
+    };
+
+    // 打印文字
+    const prettyPrint = (title, text, color) => {
+        console.log(
+            `%c ${title} %c ${text} %c`,
+            `background:${color};border:1px solid ${color}; padding: 1px; border-radius: 2px 0 0 2px; color: #fff;`,
+            `border:1px solid ${color}; padding: 1px; border-radius: 0 2px 2px 0; color: ${color};`,
+            'background:transparent'
+        );
+    };
+
+    // 打印图片
+    const picture = (url, scale = 1) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+        const c = document.createElement('canvas');
+        const ctx = c.getContext('2d');
+        if (ctx) {
+            c.width = img.width;
+            c.height = img.height;
+            ctx.fillStyle = 'red';
+            ctx.fillRect(0, 0, c.width, c.height);
+            ctx.drawImage(img, 0, 0);
+            const dataUri = c.toDataURL('image/png');
+
+            console.log(
+                `%c sup?`,
+                `font-size: 1px;
+                padding: ${Math.floor((img.height * scale) / 2)}px ${Math.floor((img.width * scale) / 2)}px;
+                background-image: url(${dataUri});
+                background-repeat: no-repeat;
+                background-size: ${img.width * scale}px ${img.height * scale}px;
+                color: transparent;
+                `
+            );
+        }
+    };
+    img.src = url;
+};
+
+
+    const info = (textOrTitle, content = '') => {
+        const title = isEmpty(content) ? 'Info' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#909399');
+    };
+    const error = (textOrTitle, content = '') => {
+        const title = isEmpty(content) ? 'Error' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#F56C6C');
+    };
+    const warning = (textOrTitle, content = '') => {
+        const title = isEmpty(content) ? 'Warning' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#E6A23C');
+    };
+    const success = (textOrTitle, content = '') => {
+        const title = isEmpty(content) ? 'Success ' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, '#67C23A');
+    };
+    const Gerald = (textOrTitle, content = '') => {
+        const title = isEmpty(content) ? 'Gerald' : textOrTitle;
+        const text = isEmpty(content) ? textOrTitle : content;
+        prettyPrint(title, text, 'skyblue');
+    };
+
+    return {
+        info,
+        error,
+        warning,
+        success,
+        picture,
+        Gerald
+    };
+};
+
+// 创建打印对象
+const log = prettyLog();
+
+log.info('Gnc', '代码就是诗，编写代码是一种艺术。');
+
+log.warning('Hahoc', '99%的性能问题源自于最后的1%代码。');
+
+log.success('James', '没有哪段代码是写不完的，只是时间不够了。');
+
+log.Gerald('Gerald', '代码是一种艺术，它可以让你感受到自己的创造力和想象力。');
+
+log.error('Howard', '调试一段代码，有时需要更多时间来找到错误，而不是修复它。');
+
+// log.picture('https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2024%2F0514%2Fd0ea93ebj00sdgx56001xd200u000gtg00hz00a2.jpg&thumbnail=660x2147483647&quality=80&type=jpg');
+
+log.picture('https://picsum.photos/640/360');
+
+
+
 </script>
 <template>
   <div class="w-screen h-screen flex items-center justify-center overflow-hidden">
