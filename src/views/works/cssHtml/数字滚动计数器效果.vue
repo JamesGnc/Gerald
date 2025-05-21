@@ -26,7 +26,7 @@ export default {
   name: 'NumberCounter',
   code: 'https://github.com/JamesGnc/HTML-Interesting-Demos/blob/main/NumberRow/index.html',
   link: '', // 可选：相关文章链接
-  cover: '../../../../public/images/20250521-153439.gif', // 可选：封面图片
+  cover: 'https://www.xn--tsl-ww1em0jbvwvjn4r5e44ta.cn/images/20250521-153439.gif', // 可选：封面图片
   info: '一个使用CSS和JavaScript实现的数字滚动计数器效果，支持自定义滚动时间、循环次数等参数，展示了平滑的数字变换动画。',
   sort: 1,
   date: '2025-05-21',
