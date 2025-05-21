@@ -1,11 +1,11 @@
 export default {
     userName:'Gerald',
     email:'l1796487364@yeah.net',
-    github:'https://github.com/sunwenxu1997',
+    github:'https://github.com/JamesGnc',
     // 掘金
     juejin:'https://juejin.cn/user/Genc',
     // github个人主页地址
-    githubLink: 'https://github.com/sunwenxu1997',
+    githubLink: 'https://github.com/JamesGnc',
     // 外部引入文件
     externalRoutes: [
         {
