@@ -96,14 +96,14 @@ export default {
         {
           username: '西兰花叮',
           tag: 'PHP 程儿',
-          avatar: '/path/to/avatar1.jpg',
+          avatar: 'https://q9.itc.cn/q_70/images03/20241013/d770472d4906402c866b9c71a0c9927c.jpeg',
           content: '所以你整夜整的是怎么个效果？',
           time: '1小时前'
         },
         {
           username: 'Yser',
           tag: '摸鱼',
-          avatar: '/path/to/avatar2.jpg',
+          avatar: 'https://img2.baidu.com/it/u=342349908,3389341233&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500',
           content: '换一个思路，老虎机🎰，跟这个也差不多',
           time: '1天前'
         }
