@@ -1,27 +1,20 @@
-# 将静态内容部署到 GitHub Pages 的简易工作流程
 name: Deploy static content to Pages
 
 on:
-  # 仅在推送到默认分支时运行。
   push:
     branches: ['main']
-
-  # 这个选项可以使你手动在 Action tab 页面触发工作流
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 允许一个并发的部署
 concurrency:
   group: 'pages'
   cancel-in-progress: true
 
 jobs:
-  # 单次部署的工作描述
   deploy:
     environment:
       name: github-pages
@@ -29,23 +22,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4  # ✅ 升级至稳定版
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4  # ✅ 更新版本
         with:
-          node-version: '16.x' # node版本号
+          node-version: '20.x'  # ✅ 升级至LTS版本
+          cache: 'npm'  # 🆕 新增缓存依赖功能
           registry-url: 'https://registry.npmjs.org'
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # ✅ 更安全的依赖安装方式
+
       - name: Build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4  # ✅ 重要升级
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2  # ✅ 最新版本
         with:
-          # Upload dist repository
           path: './dist'
+          retention-days: 3  # 🆕 添加制品保留策略
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2  # ✅ 匹配最新版
