@@ -80,7 +80,7 @@ onMounted(() => {
           <div class="work-card">
             <div class="work-image">
               <img
-                src="https://www.xn--tsl-ww1em0jbvwvjn4r5e44ta.cn/images/lz.jpg"
+                src="https://www.xn--tsl-ww1em0jbvwvjn4r5e44ta.cn/images/lz.png"
                 alt="小程序二维码"
                 class="qr-code"
               />
@@ -99,7 +99,7 @@ onMounted(() => {
           <div class="work-card">
             <div class="work-image">
               <img
-                src="https://www.xn--tsl-ww1em0jbvwvjn4r5e44ta.cn/images/dk.jpg"
+                src="https://www.xn--tsl-ww1em0jbvwvjn4r5e44ta.cn/images/dk.png"
                 alt="小程序二维码"
                 class="qr-code"
               />
